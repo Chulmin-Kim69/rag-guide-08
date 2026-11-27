@@ -58,7 +58,7 @@ def current_user(x_user_id: str | None = Header(default=None)) -> User:
     """실습용: 신원은 요청 본문이 아니라 로그인 정보(헤더)에서 앱이 정한다. 헤더가 없으면 e001"""
     return User(id=x_user_id or "e001")
 
-    PENDING: dict[str, dict] = {}   # session_id → 확인 대기 중인 도구 요청 (실습용 메모리 저장)
+PENDING: dict[str, dict] = {}   # session_id → 확인 대기 중인 도구 요청 (실습용 메모리 저장)
 HISTORY: dict[str, list] = {}   # session_id → 대화 메시지
 
 
